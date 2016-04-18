@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -euo pipefail
+
+docker build -t twilio_integration -f Dockerfile .
+docker tag -f twilio_integration:latest 914794084459.dkr.ecr.us-east-1.amazonaws.com/twilio_integration:latest
+docker push 914794084459.dkr.ecr.us-east-1.amazonaws.com/twilio_integration:latest
